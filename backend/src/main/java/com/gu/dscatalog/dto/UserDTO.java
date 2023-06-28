@@ -3,13 +3,18 @@ package com.gu.dscatalog.dto;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+
 import com.gu.dscatalog.entities.User;
 
 public class UserDTO {
 
 	private Long id;
+	@NotBlank(message = "Campo requirido")
 	private String firstName;
 	private String lastName;
+	@Email(message = "Favor entrar com email válido")
 	private String email;
 
 	private List<RoleDTO> roles = new ArrayList<>();

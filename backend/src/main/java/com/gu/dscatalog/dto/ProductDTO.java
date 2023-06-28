@@ -23,7 +23,7 @@ public class ProductDTO {
 	@Positive(message = "Preço deve ser maior que zero")
 	private Double price;
 	private String imgUrl;
-	@PastOrPresent(message = "Data deve ser futura")
+	@PastOrPresent(message = "Data não deve ser futura")
 	private Instant date;
 
 	private List<CategoryDTO> categories = new ArrayList<>();
